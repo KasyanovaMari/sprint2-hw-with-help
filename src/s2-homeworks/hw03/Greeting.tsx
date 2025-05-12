@@ -2,14 +2,14 @@ import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
 
 type GreetingPropsType = {
-    name: any // need to fix any
-    setNameCallback: any // need to fix any
-    addUser: any // need to fix any
-    onBlur: any // need to fix any
-    onEnter: any // need to fix any
-    error: any // need to fix any
-    totalUsers: any // need to fix any
-    lastUserName?: any // need to fix any
+    name: string // need to fix any
+    setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void // need to fix any
+    addUser: () => void  // need to fix any
+    onBlur: () => void  // need to fix any
+    onEnter: (e: KeyboardEvent<HTMLInputElement>) => void // need to fix any
+    error: string // need to fix any
+    totalUsers: number // need to fix any
+    lastUserName?: string // need to fix any
 }
 
 // презентационная компонента (для верстальщика)
@@ -23,9 +23,9 @@ const Greeting: React.FC<GreetingPropsType> = (
         error,
         totalUsers,
         lastUserName,
-    } // деструктуризация пропсов
+    }
 ) => {
-    const inputClass = s.errorInput // need to fix with (? s.errorInput : s.input)
+    const inputClass = error ? s.errorInput : s.input // need to fix with
 
     return (
         <div id={'hw3-form'} className={s.greetingForm}>
@@ -56,6 +56,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                     onClick={addUser}
                     className={s.button}
                     disabled={!name.trim()}
+
                     // ДАВАЙТЕ ПРОСЛЕДИМ БОЕВОЙ ПУТЬ addUser:
                     // ОТСЮДА ОН ВСПЛЫВЕТ В КОМПОНЕНТЕ GreetingContainer И ВЫЗОВЕТ pureAddUser->
                     // А В pureAddUser ЛИБО ВЫДАСТ ОШИБКУ (ЕСЛИ ПУСТОЙ name) ИЛИ ЗАПУТСИТ addUserCallback->
