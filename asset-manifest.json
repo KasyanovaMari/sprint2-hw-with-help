@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/sprint2-hw-with-help/static/css/main.6abd87b0.css",
-    "main.js": "/sprint2-hw-with-help/static/js/main.6f2e5837.js",
+    "main.js": "/sprint2-hw-with-help/static/js/main.967cb6bf.js",
     "static/js/896.286e0265.chunk.js": "/sprint2-hw-with-help/static/js/896.286e0265.chunk.js",
     "static/media/avatar.png": "/sprint2-hw-with-help/static/media/avatar.d947cb9d0d13765666b6.png",
     "index.html": "/sprint2-hw-with-help/index.html",
     "main.6abd87b0.css.map": "/sprint2-hw-with-help/static/css/main.6abd87b0.css.map",
-    "main.6f2e5837.js.map": "/sprint2-hw-with-help/static/js/main.6f2e5837.js.map",
+    "main.967cb6bf.js.map": "/sprint2-hw-with-help/static/js/main.967cb6bf.js.map",
     "896.286e0265.chunk.js.map": "/sprint2-hw-with-help/static/js/896.286e0265.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6abd87b0.css",
-    "static/js/main.6f2e5837.js"
+    "static/js/main.967cb6bf.js"
   ]
 }
